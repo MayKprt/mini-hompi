@@ -214,3 +214,59 @@
 .visitor-robin-baby{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
 
 .visitor-pixel-sprite{position:absolute;left:0;top:50%;width:100%;height:auto;aspect-ratio:3/4;transform:translateY(-50%);image-rendering:pixelated}
+
+/* Fit the full desktop/tablet shell; mobile and the standalone embed stay unchanged. */
+@media(min-width:701px){
+ html:not(.embed-document),html:not(.embed-document) body,html:not(.embed-document) #root{height:100%;overflow:hidden}
+ html:not(.embed-document) .page{height:100dvh;width:100%;max-width:1440px;padding:14px 88px 10px 16px;display:flex;flex-direction:column;min-height:0}
+ html:not(.embed-document) .masthead{flex:none;margin:0 6px 12px}
+ html:not(.embed-document) .hompi{flex:1;min-height:0;grid-template-rows:minmax(0,1fr)}
+ html:not(.embed-document) .profile{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ html:not(.embed-document) .since{padding-top:22px}
+ html:not(.embed-document) .room-panel{min-height:0;display:flex;flex-direction:column;overflow:hidden}
+ html:not(.embed-document) .room-heading{flex:none;margin-bottom:18px}
+ html:not(.embed-document) #miniroom-view:not([hidden]),html:not(.embed-document) .hompi-extra-view{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ html:not(.embed-document) #miniroom-view>.tabs{position:sticky;top:0;z-index:40;background:#fffdf8;padding-top:3px}
+ html:not(.embed-document) .hompi-extra-view{padding-top:10px;padding-bottom:18px}
+ html:not(.embed-document) .hompi-tools{min-height:0;max-height:100%;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ html:not(.embed-document) .scene{width:min(100%,calc((100dvh - 310px)*940/680));margin-left:auto;margin-right:auto}
+ html:not(.embed-document) .hompi-side-tabs{top:55px;width:72px}
+ html:not(.embed-document) footer{flex:none;padding-top:9px}
+}
+@media(min-width:701px) and (max-width:1100px){
+ html:not(.embed-document) .page{padding-right:80px}
+ html:not(.embed-document) .hompi{grid-template-rows:minmax(0,1fr) auto}
+ html:not(.embed-document) .hompi-tools{grid-template-columns:1fr 1fr;max-height:210px}
+ html:not(.embed-document) .hompi-side-tabs{width:65px}
+ html:not(.embed-document) .scene{width:min(100%,calc((100dvh - 470px)*940/680));min-width:230px}
+}
+@media(min-width:701px){
+ html:not(.embed-document) #miniroom-view>.instructions{margin-left:0;margin-right:0}
+ html:not(.embed-document) #miniroom-view:not([hidden]),html:not(.embed-document) .hompi-extra-view{overflow-x:hidden}
+}
+
+/* Compact the stationary profile and keep scrolling content clear of its gutter. */
+@media(min-width:701px){
+ html:not(.embed-document) .profile{padding:14px 12px 10px;overflow:visible}
+ html:not(.embed-document) .profile-inner{padding-top:12px}
+ html:not(.embed-document) .portrait{height:clamp(80px,15dvh,130px)}
+ html:not(.embed-document) .portrait img{height:85%;max-width:100%;object-fit:contain}
+ html:not(.embed-document) .mood{padding:8px 0}
+ html:not(.embed-document) .intro{margin:12px 4px;line-height:1.7}
+ html:not(.embed-document) .profile-caption{margin-top:7px;margin-bottom:7px}
+ html:not(.embed-document) .profile-divider{margin:12px 0}
+ html:not(.embed-document) .connections-hint,html:not(.embed-document) .connections-feedback{margin-top:6px;line-height:1.5}
+ html:not(.embed-document) .since{padding-top:12px}
+ html:not(.embed-document) #miniroom-view:not([hidden]),html:not(.embed-document) .hompi-extra-view{scrollbar-gutter:stable;padding-right:12px}
+}
+@media(min-width:701px) and (max-height:650px){
+ html:not(.embed-document) .profile{padding-top:10px;padding-bottom:8px}
+ html:not(.embed-document) .profile-inner{padding-top:8px}
+ html:not(.embed-document) .portrait{height:76px}
+ html:not(.embed-document) .mood{padding:6px 0}
+ html:not(.embed-document) .intro{margin:8px 4px;font-size:11px;line-height:1.5}
+ html:not(.embed-document) .profile-divider{margin:8px 0}
+ html:not(.embed-document) .profile-name{font-size:16px}
+ html:not(.embed-document) .profile-caption{margin-top:5px;margin-bottom:5px}
+ html:not(.embed-document) .since{padding-top:8px}
+}
