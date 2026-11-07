@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" shape-rendering="crispEdges">
+<!-- Transparent baby visitor in a mouse-ear costume, on a consistent pixel grid. -->
+<g fill="#302728"><path d="M5 3h9v2h3v9h-3v3H5v-3H2V6h3zM34 3h9v3h3v8h-3v3h-9v-3h-3V6h3z"/><path d="M15 10h18v3h6v5h3v16h-3v6h-6v3H15v-3H9v-6H6V18h3v-5h6z"/><path d="M16 40h16v3h4v7h-4v7h-6v-5h-4v5h-6v-7h-4v-7h4z"/></g>
+<g fill="#494347"><path d="M5 6h8v2h2v5h-2v2H5v-3H4V8h1zM35 6h7v2h2v5h-2v2h-7z"/><path d="M15 13h18v2h6v5h-3v-2h-5v-2H17v2h-5v3H9v-3h3v-3h3z"/></g>
+<path d="M17 18h14v2h5v4h3v9h-3v5h-5v3H17v-3h-5v-5H9v-9h3v-4h5z" fill="#d9956e"/>
+<path d="M17 19h14v2h4v4h2v8h-3v4h-4v2H18v-2h-4v-4h-3v-8h2v-4h4z" fill="#ffdab2"/>
+<path d="M16 23h3v-2h11v2h3v1H16z" fill="#ffe8c9"/>
+<path d="M20 19h3v-2h4v2h2v3h-3v-2h-3v2h-3z" fill="#76422a"/>
+<path d="M15 27h5v6h-5zm13 0h5v6h-5z" fill="#472f2b"/>
+<path d="M16 27h2v2h-2zm13 0h2v2h-2z" fill="#fff9e9"/>
+<path d="M17 31h2v1h-2zm13 0h2v1h-2z" fill="#9c6644"/>
+<path d="M12 33h7v3h-7zm18 0h7v3h-7z" fill="#ed9c96"/>
+<path d="M21 34h7v4h-7z" fill="#9e534b"/><path d="M22 34h5v1h-5z" fill="#fff4de"/><path d="M23 37h4v1h-4z" fill="#eb9a96"/>
+<path d="M17 41h14v7H17z" fill="#272429"/><path d="M17 42h3v5h-3z" fill="#4b4147"/>
+<!-- Short red romper with two cream buttons and white mittens. -->
+<path d="M15 47h18v7h-3v3h-6v-3h-3v3h-6z" fill="#9e333e"/>
+<path d="M16 47h16v5h-3v3h-4v-3h-5v3h-4z" fill="#dc4e50"/>
+<path d="M17 48h3v3h-3zm10 0h3v3h-3z" fill="#fff1c6"/>
+<path d="M9 43h5v2h2v5h-3v2H8v-3H6v-4h3zm25 0h5v2h3v4h-2v3h-5v-2h-3v-5h2z" fill="#726660"/>
+<path d="M9 44h4v2h2v3h-3v2H9v-3H7v-2h2zm26 0h3v2h3v2h-2v3h-3v-2h-3v-3h2z" fill="#fff5dc"/>
+<path d="M12 56h9v2h2v5H10v-2H8v-3h4zm15 0h9v2h4v3h-2v2H25v-5h2z" fill="#885824"/>
+<path d="M12 57h8v2h2v3H10v-3h2zm16 0h7v2h4v2h-2v1H26v-3h2z" fill="#edba4e"/>
+<path d="M13 58h6v1h-6zm16 0h5v1h-5z" fill="#ffe18c"/>
+</svg>
