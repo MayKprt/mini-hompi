@@ -53,3 +53,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Render Jamie, Alex and Sophie on a 36×48 logical pixel grid with nearest-neighbor enlargement to give them more pronounced pixels like Robin, preserving their existing sprite designs and transparent slots.
 
 - Enlarge Jamie/Alex/Sophie heads within the same avatar slots: head gets 44 of 64 logical rows, compact body 20. Use a 48×64 crisp grid so eyes and glints remain readable. Robin remains unchanged.
+
+- Desktop/tablet (>700px): fit the complete full hompi shell within the viewport with small margins, including external navigation tabs, profile and persistent tools. Scroll long content inside its panel; keep the outer page and navigation stationary. Preserve the existing <=700px mobile layout and standalone portfolio embed.
+- Desktop/tablet profile must fit all existing elements without scrolling: compact portrait and vertical spacing rather than clipping content. Main content reserves a stable scrollbar gutter plus inner right padding; mobile and embed remain unchanged.
