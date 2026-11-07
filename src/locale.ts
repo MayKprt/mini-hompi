@@ -1,0 +1,78 @@
+// Portfolio language is URL-only: never persist it or infer it from the browser.
+export function isPortfolioMode(search: string): boolean {
+  return new URLSearchParams(search).get('mode') === 'portfolio';
+}
+
+export const english: Record<string, string> = {
+  '오늘도, 좋은 하루!': 'Welcome to Myworld! Take a look ♡',
+  '나만의 작은 세상에 오신 걸 환영해요.': 'Welcome to my little corner of the world.',
+  '가구가 없는 바닥을 눌러 주세요.': 'Try a clear spot on the floor.',
+  '사뿐사뿐, 미니미가 걸어가요.': 'Tip, tap… here comes Bomi!',
+  '스탠드를 껐어요.': 'Lights out. Time to get cozy.',
+  '따뜻한 불을 켰어요.': 'A little warm light makes everything cozier.',
+  '잠깐 쉬어 갈까요?': 'Let’s take a little break, shall we?',
+  '포근한 소파에서 쉬는 중 · 바닥을 누르면 일어나요.': 'Getting cozy on the sofa. Click the floor to hop up.',
+  '소파 옆에 걸어갈 공간을 만들어 주세요.': 'Leave a little space beside the sofa so I can reach it.',
+  '너도 무럭무럭 자라렴.': 'Keep growing, little leafy friend!',
+  '내가 아끼는 작은 물건들.': 'A few of my favorite little things.',
+  '꾸미기를 마쳤어요. 가구 배치를 저장했어요.': 'All done! Your room arrangement is saved.',
+  '가구를 드래그해 보세요. 겹치는 자리는 피할게요.': 'Drag the furniture around. I’ll keep things from overlapping.',
+  '다시, 처음의 설렘으로!': 'Back to that lovely first-day feeling!',
+  '처음의 방으로 돌아왔어요.': 'The room is back to where it started.',
+  '창문: 낮과 밤 바꾸기': 'Window: switch between day and night',
+  '햇살이 방 안으로 들어와요.': 'A little sunshine is peeking into the room.',
+  '별이 뜨는 밤이 되었어요.': 'The stars are out. Hello, little night sky!',
+  '밤 → 낮': 'Night → Day',
+  '낮 → 밤': 'Day → Night',
+  '꾸미기 모드 · 가구를 끌어서 옮겨 보세요': 'Decorating mode · Drag furniture to a new spot',
+  '분홍 소파': 'Pink sofa',
+  '티 테이블': 'Tea table',
+  '스탠드': 'Floor lamp',
+  '작은 책장': 'Little bookcase',
+  '초록 친구': 'Leafy friend',
+  '미니미 봄이': 'Bomi the mini-mi',
+  '앉아 있음': 'sitting',
+  '걷는 중': 'walking',
+  '인사하기': 'say hello',
+  '안녕! 내 방에 놀러 와 줘서 고마워 ♡': 'Hi! Thanks for stopping by my little room ♡',
+  '봄이': 'Bomi',
+  '나의 작은 취향이 모이는 곳': 'A little home for all my favorite things',
+  '화요일의 작은 행복': 'A little Tuesday happiness',
+  '분홍 카디건을 입은 미니미 봄이': 'Bomi, a mini-mi in a pink cardigan',
+  '포근함': 'Cozy',
+  '좋아하는 것들로 채운': 'Filled with the things I love.',
+  '나의 작은 방.': 'My own little room.',
+  '잠깐 쉬었다 가요.': 'Stay a while and make yourself at home.',
+  '작고 소중한 일상의 기록': 'Little moments worth keeping',
+  '오후의 햇살': 'Afternoon Sunshine',
+  '마음속으로 재생 중': 'Playing in my imagination',
+  '봄이의 미니홈피': 'Bomi’s mini hompi',
+  '나만의 공간': 'My little space',
+  '미니룸': 'Miniroom',
+  '꾸미기': 'Decorate',
+  '오늘도 내 방에서, 편안하게.': 'Make yourself at home.',
+  '햇살이 머무는 방': 'A room full of sunshine',
+  '고요한 밤': 'A quiet night',
+  '나른한 오후': 'A lazy afternoon',
+  '꾸미기 완료': 'Done decorating',
+  '처음으로': 'Reset room',
+  '이동할 가구': 'Choose furniture to move',
+  '미세 조정': 'Fine-tune',
+  '가구 이동': 'Move furniture',
+  '작은 방 사용법': 'Make yourself at home',
+  '바닥을 누르면 걷고, 미니미를 누르면 인사해요.': 'Click the floor to walk, or Bomi to say hello.',
+  '소파에서 쉬고, 조명과 창문도 눌러 보세요.': 'Rest on the sofa, or try the lamp and window.',
+  '저장됨': 'Saved',
+  '저장 공간 확인 필요': 'Couldn’t save this time',
+  '나의 방': 'My room',
+  '조금 느려도 괜찮아, 여기는 나의 작은 세상.': 'Take your time. This little world is yours.',
+  '따뜻한 나무 바닥과 두 벽이 있는 아이소메트릭 미니룸': 'A cozy isometric miniroom with wooden floors and two walls',
+  '인터랙티브 미니룸': 'Interactive miniroom',
+};
+
+export function translator(portfolio: boolean) {
+  return (text: string): string => {
+    const trimmed = text.trim();
+    return portfolio && english[trimmed] ? text.replace(trimmed, english[trimmed]) : text;
+  };
+}
